@@ -1,31 +1,24 @@
 /*
   Bishnu's Buddy — chatbot widget
+  Toggle and window are both independently position:fixed — no wrapper overlay.
 */
 
-/* wrapper is exactly the size of the toggle button — no invisible overlay on the page */
-.chatbot-wrapper {
+/* ---- toggle button ---- */
+.chatbot-toggle {
   position: fixed;
   bottom: 1.8rem;
   right: 1.8rem;
   z-index: 9999;
   width: 56px;
   height: 56px;
-}
-
-.chatbot-toggle {
-  width: 56px;
-  height: 56px;
   border-radius: 50%;
   background: linear-gradient(130deg, #3b72ff, #2dd4bf);
   color: #fff;
-  font-size: 1.45rem;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 22px rgba(59,114,255,0.4);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
-  position: relative;
-  z-index: 1;
 }
 .chatbot-toggle:hover {
   transform: scale(1.08);
@@ -33,15 +26,20 @@
 }
 .chatbot-toggle.open { background: linear-gradient(130deg, #2dd4bf, #3b72ff); }
 
-.toggle-icon-close { display: none; font-size: 1rem; }
-.chatbot-toggle.open .toggle-icon-open { display: none; }
-.chatbot-toggle.open .toggle-icon-close { display: block; }
+.toggle-icon-open { display: flex; align-items: center; }
+.toggle-icon-open svg { width: 22px; height: 22px; }
+.toggle-icon-close { display: none; align-items: center; }
+.toggle-icon-close svg { width: 16px; height: 16px; }
 
-/* window is absolutely positioned above the toggle — not in the layout flow */
+.chatbot-toggle.open .toggle-icon-open { display: none; }
+.chatbot-toggle.open .toggle-icon-close { display: flex; }
+
+/* ---- chat window ---- */
 .chatbot-window {
-  position: absolute;
-  bottom: calc(56px + 0.9rem);
-  right: 0;
+  position: fixed;
+  bottom: calc(1.8rem + 56px + 0.9rem);
+  right: 1.8rem;
+  z-index: 9998;
   width: 370px;
   height: 510px;
   background: #0b0e1a;
@@ -63,7 +61,7 @@
   pointer-events: auto;
 }
 
-/* header */
+/* ---- header ---- */
 .chat-header {
   padding: 0.95rem 1.1rem;
   background: linear-gradient(130deg, rgba(59,114,255,0.1), rgba(45,212,191,0.08));
@@ -71,6 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 .chat-header-info { display: flex; align-items: center; gap: 0.7rem; }
 .chat-avatar {
@@ -81,8 +80,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  color: #3b72ff;
 }
+.chat-avatar svg { width: 18px; height: 18px; }
 .chat-header h4 { font-size: 0.92rem; font-weight: 600; color: #fff; margin: 0; }
 .chat-status {
   font-size: 0.68rem;
@@ -110,11 +110,14 @@
   padding: 0.28rem 0.4rem;
   border-radius: 5px;
   transition: color 0.2s ease, background 0.2s ease;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .chat-close:hover { color: #fff; background: rgba(255,255,255,0.07); }
+.chat-close svg { width: 14px; height: 14px; }
 
-/* messages */
+/* ---- messages ---- */
 .chat-messages {
   flex: 1;
   overflow-y: auto;
@@ -153,9 +156,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 0.72rem;
+  color: #3b72ff;
   flex-shrink: 0;
 }
+.msg-avatar svg { width: 13px; height: 13px; }
 
 .msg-bubble {
   padding: 0.7rem 0.95rem;
@@ -183,7 +188,7 @@
 .msg-bubble p { margin-bottom: 0.4rem; }
 .msg-bubble p:last-child { margin-bottom: 0; }
 
-/* typing indicator */
+/* ---- typing indicator ---- */
 .typing-indicator .msg-bubble {
   padding: 0.7rem 1rem;
   display: flex;
@@ -203,7 +208,7 @@
   30% { transform:translateY(-6px); opacity:1; }
 }
 
-/* suggestion chips */
+/* ---- suggestion chips ---- */
 .chat-suggestions {
   display: flex;
   flex-wrap: wrap;
@@ -227,7 +232,7 @@
   transform: translateY(-1px);
 }
 
-/* input area */
+/* ---- input area ---- */
 .chat-input-area {
   padding: 0.9rem 1rem;
   border-top: 1px solid rgba(255,255,255,0.055);
@@ -235,6 +240,7 @@
   gap: 0.55rem;
   align-items: center;
   background: rgba(0,0,0,0.18);
+  flex-shrink: 0;
 }
 
 #chatInput {
@@ -266,9 +272,12 @@
 #chatSend:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
 #chatSend svg { width: 14px; height: 14px; }
 
+/* ---- mobile ---- */
 @media (max-width: 480px) {
-  .chatbot-wrapper { bottom: 1rem; right: 1rem; }
+  .chatbot-toggle { bottom: 1rem; right: 1rem; }
   .chatbot-window {
+    bottom: calc(1rem + 56px + 0.9rem);
+    right: 1rem;
     width: calc(100vw - 2rem);
     height: 470px;
   }

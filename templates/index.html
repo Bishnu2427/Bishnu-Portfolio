@@ -15,32 +15,32 @@
 </head>
 <body>
 
-  <!-- cursor glow — follows mouse -->
+  <!-- cursor glow -->
   <div id="cursorGlow"></div>
 
   <!-- live status ticker -->
   <div class="ticker-wrap">
     <div class="ticker-inner">
-      <span>⚡ Currently building Vachi.ai @ SARA Analytics</span>
-      <span class="tsep">·</span>
-      <span>🤖 Orchestrated 28 AI Agents in production</span>
-      <span class="tsep">·</span>
-      <span>☁️ AWS Bedrock · Docker · Kafka · CrewAI</span>
-      <span class="tsep">·</span>
-      <span>📍 Jaipur, India &mdash; Open to Opportunities</span>
-      <span class="tsep">·</span>
-      <span>🦙 Fine-tuned Llama 3.3 70B in production</span>
-      <span class="tsep">·</span>
-      <span>⚡ Currently building Vachi.ai @ SARA Analytics</span>
-      <span class="tsep">·</span>
-      <span>🤖 Orchestrated 28 AI Agents in production</span>
-      <span class="tsep">·</span>
-      <span>☁️ AWS Bedrock · Docker · Kafka · CrewAI</span>
-      <span class="tsep">·</span>
-      <span>📍 Jaipur, India &mdash; Open to Opportunities</span>
-      <span class="tsep">·</span>
-      <span>🦙 Fine-tuned Llama 3.3 70B in production</span>
-      <span class="tsep">·</span>
+      <span>Currently building Vachi.ai @ SARA Analytics</span>
+      <span class="tsep">/</span>
+      <span>Orchestrated 28 AI Agents in production</span>
+      <span class="tsep">/</span>
+      <span>AWS Bedrock · Docker · Kafka · CrewAI</span>
+      <span class="tsep">/</span>
+      <span>Jaipur, India &mdash; Open to Opportunities</span>
+      <span class="tsep">/</span>
+      <span>Fine-tuned Llama 3.3 70B in production</span>
+      <span class="tsep">/</span>
+      <span>Currently building Vachi.ai @ SARA Analytics</span>
+      <span class="tsep">/</span>
+      <span>Orchestrated 28 AI Agents in production</span>
+      <span class="tsep">/</span>
+      <span>AWS Bedrock · Docker · Kafka · CrewAI</span>
+      <span class="tsep">/</span>
+      <span>Jaipur, India &mdash; Open to Opportunities</span>
+      <span class="tsep">/</span>
+      <span>Fine-tuned Llama 3.3 70B in production</span>
+      <span class="tsep">/</span>
     </div>
   </div>
 
@@ -89,6 +89,12 @@
           <a href="#contact" class="btn-primary">Get in Touch</a>
           <a href="#projects" class="btn-ghost">View My Work</a>
         </div>
+        <a href="{{ url_for('static', filename='files/Bishnu_Kumar_Singh_CV.pdf') }}"
+           download="Bishnu_Kumar_Singh_CV.pdf"
+           class="cv-download-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
         <div class="hero-socials">
           <a href="https://github.com/Bishnu2427" target="_blank" rel="noopener" class="social-link" title="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
@@ -149,14 +155,18 @@
           </p>
           <div class="about-quick-facts">
             <div class="fact">
-              <span class="fact-icon">🎓</span>
+              <span class="fact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </span>
               <div>
                 <strong>UEM Jaipur</strong>
                 <span>B.Tech CSE-AIML, 2025</span>
               </div>
             </div>
             <div class="fact">
-              <span class="fact-icon">📍</span>
+              <span class="fact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
               <div>
                 <strong>Jaipur, Rajasthan</strong>
                 <span>Open to relocation / remote</span>
@@ -244,7 +254,9 @@
 
         <div class="skill-group reveal">
           <div class="skill-group-header">
-            <span class="skill-group-icon">🧠</span>
+            <span class="skill-group-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            </span>
             <h3>Core AI / ML</h3>
           </div>
           <div class="skill-tags">
@@ -265,8 +277,10 @@
 
         <div class="skill-group reveal">
           <div class="skill-group-header">
-            <span class="skill-group-icon">☁️</span>
-            <h3>Cloud & DevOps</h3>
+            <span class="skill-group-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </span>
+            <h3>Cloud &amp; DevOps</h3>
           </div>
           <div class="skill-tags">
             <span class="stag stag-hot">AWS EC2</span>
@@ -284,8 +298,10 @@
 
         <div class="skill-group reveal">
           <div class="skill-group-header">
-            <span class="skill-group-icon">⚙️</span>
-            <h3>Backend & Frameworks</h3>
+            <span class="skill-group-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </span>
+            <h3>Backend &amp; Frameworks</h3>
           </div>
           <div class="skill-tags">
             <span class="stag stag-hot">Python</span>
@@ -301,7 +317,9 @@
 
         <div class="skill-group reveal">
           <div class="skill-group-header">
-            <span class="skill-group-icon">🗄️</span>
+            <span class="skill-group-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </span>
             <h3>Databases</h3>
           </div>
           <div class="skill-tags">
@@ -316,8 +334,10 @@
 
         <div class="skill-group reveal">
           <div class="skill-group-header">
-            <span class="skill-group-icon">🛠️</span>
-            <h3>Tools & Platforms</h3>
+            <span class="skill-group-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </span>
+            <h3>Tools &amp; Platforms</h3>
           </div>
           <div class="skill-tags">
             <span class="stag">Power BI</span>
@@ -334,8 +354,10 @@
 
         <div class="skill-group reveal">
           <div class="skill-group-header">
-            <span class="skill-group-icon">🖥️</span>
-            <h3>Systems & Web</h3>
+            <span class="skill-group-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </span>
+            <h3>Systems &amp; Web</h3>
           </div>
           <div class="skill-tags">
             <span class="stag stag-hot">Linux</span>
@@ -371,7 +393,7 @@
               <h3>AI-ML Engineer</h3>
               <span class="company-tag">SARA Analytics Pvt Ltd</span>
             </div>
-            <span class="location-tag">📍 Jaipur, RJ (On-site)</span>
+            <span class="location-tag">Jaipur, RJ (On-site)</span>
             <ul class="timeline-points">
               <li>Leading AI &amp; full-stack development for <strong>Vachi.ai</strong> — flagship product, from architecture to global launch readiness.</li>
               <li>Built an AI-powered employee monitoring system (.msi desktop → Flask backend → web dashboard) as a direct competitor to HubStaff and Laurel.ai, using Flask, MongoDB, OpenCV, AWS EC2/MSK/Bedrock/ECS, LLMs, and RAG.</li>
@@ -395,7 +417,7 @@
               <h3>Data Analyst Intern</h3>
               <span class="company-tag">Mayur Uniquoters Ltd.</span>
             </div>
-            <span class="location-tag">📍 Jaipur, RJ (On-site)</span>
+            <span class="location-tag">Jaipur, RJ (On-site)</span>
             <p class="timeline-project">Project: Optimization of Manual Data Entry Operations</p>
             <ul class="timeline-points">
               <li>Built a hardware-based AI model (Arduino UNO + ESP32-Cam + OpenCV + Python) that automatically captures data from physical paper sheets and loads it directly into Excel.</li>
@@ -415,7 +437,7 @@
               <h3>Data Analyst Intern</h3>
               <span class="company-tag">Afame Technologies</span>
             </div>
-            <span class="location-tag">🌐 Remote</span>
+            <span class="location-tag">Remote</span>
             <p class="timeline-project">Project: Data Analysis on Fetched Data</p>
             <ul class="timeline-points">
               <li>Built fake news detection and fraud detection models using ML algorithms.</li>
@@ -440,13 +462,15 @@
       </div>
       <div class="projects-grid">
 
-        <!-- featured — most starred, hardware+AI bridge -->
         <div class="project-card project-card--featured reveal">
           <div class="project-card-top">
             <div class="proj-meta">
               <span class="lang-dot" style="background:#555555;"></span>
               <span class="proj-lang">C / Python</span>
-              <span class="proj-stars">⭐ 2</span>
+              <span class="proj-stars">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                2
+              </span>
             </div>
             <a href="https://github.com/Bishnu2427/ESP32_Webcam_Access_using_OpenCV" target="_blank" class="proj-link" title="View on GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
@@ -464,7 +488,10 @@
             <div class="proj-meta">
               <span class="lang-dot" style="background:#3776ab;"></span>
               <span class="proj-lang">Python</span>
-              <span class="proj-stars">⭐ 1</span>
+              <span class="proj-stars">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                1
+              </span>
             </div>
             <a href="https://github.com/Bishnu2427/Chronic_Kidney_Disease_using_ML" target="_blank" class="proj-link" title="View on GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
@@ -482,7 +509,10 @@
             <div class="proj-meta">
               <span class="lang-dot" style="background:#da5b0b;"></span>
               <span class="proj-lang">Jupyter</span>
-              <span class="proj-stars">⭐ 1</span>
+              <span class="proj-stars">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                1
+              </span>
             </div>
             <a href="https://github.com/Bishnu2427/Covid-19-Prediction-using-ML" target="_blank" class="proj-link" title="View on GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
@@ -500,7 +530,10 @@
             <div class="proj-meta">
               <span class="lang-dot" style="background:#3776ab;"></span>
               <span class="proj-lang">Python</span>
-              <span class="proj-stars">⭐ 1</span>
+              <span class="proj-stars">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                1
+              </span>
             </div>
             <a href="https://github.com/Bishnu2427/Student_Management_System_Flet_App" target="_blank" class="proj-link" title="View on GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
@@ -596,30 +629,46 @@
       <div class="achievements-layout">
         <div class="awards-col">
           <h3 class="sub-heading">Awards &amp; Highlights</h3>
+
           <div class="award-card reveal">
-            <span class="award-icon">🏆</span>
+            <span class="award-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </span>
             <div>
+              <span class="award-category">International Conference</span>
               <h4>Research Paper — ICAHTE-2024</h4>
               <p>Presented <em>"MIS using AI (AHTE47)"</em> at the International Conference on Advances in Higher Technical Education.</p>
             </div>
           </div>
+
           <div class="award-card reveal">
-            <span class="award-icon">🎓</span>
+            <span class="award-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </span>
             <div>
+              <span class="award-category">Language Certification</span>
               <h4>Cambridge Linguaskill — B1</h4>
               <p>Achieved CERF Level B1 in the Linguaskill Business test from Cambridge University.</p>
             </div>
           </div>
+
           <div class="award-card reveal">
-            <span class="award-icon">🤝</span>
+            <span class="award-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
             <div>
+              <span class="award-category">Industry Representation</span>
               <h4>ICAI AIS-2025 — AI Team Representative</h4>
               <p>Represented Harshwal Consulting Services at the Institute of Chartered Accountants of India AIS-2025 on behalf of the AI team.</p>
             </div>
           </div>
+
           <div class="award-card reveal">
-            <span class="award-icon">🚁</span>
+            <span class="award-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </span>
             <div>
+              <span class="award-category">Club Leadership</span>
               <h4>Team Lead — UAC Aeromodelling Club</h4>
               <p>Led the UEM Aeromodelling Club's AI-integrated drone project as team lead.</p>
             </div>
@@ -629,14 +678,46 @@
         <div class="certs-col">
           <h3 class="sub-heading">Certifications</h3>
           <div class="certs-grid">
-            <div class="cert-badge reveal"><span>🍃</span><p>MongoDB Python Developer Path</p><small>MongoDB University</small></div>
-            <div class="cert-badge reveal"><span>🍃</span><p>MongoDB Database Admin Path</p><small>MongoDB University</small></div>
-            <div class="cert-badge reveal"><span>☁️</span><p>AWS ML Foundation</p><small>Amazon Web Services</small></div>
-            <div class="cert-badge reveal"><span>☁️</span><p>AWS Cloud Foundations</p><small>Amazon Web Services</small></div>
-            <div class="cert-badge reveal"><span>📊</span><p>Data Analytics by Google</p><small>Coursera</small></div>
-            <div class="cert-badge reveal"><span>🌐</span><p>Data Analytics Essentials</p><small>CISCO</small></div>
-            <div class="cert-badge reveal"><span>🖥️</span><p>Introduction to Networking</p><small>NVIDIA / Coursera</small></div>
-            <div class="cert-badge reveal"><span>🛰️</span><p>Geo-processing using Python</p><small>IIRS-ISRO</small></div>
+            <div class="cert-badge reveal" style="--cert-color: #4db33d;">
+              <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>MongoDB Python Developer Path</p>
+              <small>MongoDB University</small>
+            </div>
+            <div class="cert-badge reveal" style="--cert-color: #4db33d;">
+              <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>MongoDB Database Admin Path</p>
+              <small>MongoDB University</small>
+            </div>
+            <div class="cert-badge reveal" style="--cert-color: #ff9900;">
+              <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>AWS ML Foundation</p>
+              <small>Amazon Web Services</small>
+            </div>
+            <div class="cert-badge reveal" style="--cert-color: #ff9900;">
+              <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>AWS Cloud Foundations</p>
+              <small>Amazon Web Services</small>
+            </div>
+            <div class="cert-badge reveal" style="--cert-color: #4285f4;">
+              <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>Data Analytics by Google</p>
+              <small>Coursera</small>
+            </div>
+            <div class="cert-badge reveal" style="--cert-color: #1ba0d7;">
+              <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>Data Analytics Essentials</p>
+              <small>CISCO</small>
+            </div>
+            <div class="cert-badge reveal" style="--cert-color: #76b900;">
+              <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>Introduction to Networking</p>
+              <small>NVIDIA / Coursera</small>
+            </div>
+            <div class="cert-badge reveal" style="--cert-color: #f4781e;">
+              <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>Geo-processing using Python</p>
+              <small>IIRS-ISRO</small>
+            </div>
           </div>
         </div>
       </div>
@@ -654,28 +735,36 @@
       <div class="contact-layout">
         <div class="contact-info reveal">
           <div class="contact-item">
-            <span class="contact-icon">📧</span>
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
             <div>
               <span class="contact-label">Email</span>
               <a href="mailto:singhvishnukumar22@gmail.com">singhvishnukumar22@gmail.com</a>
             </div>
           </div>
           <div class="contact-item">
-            <span class="contact-icon">📞</span>
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.07-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
             <div>
               <span class="contact-label">Phone</span>
               <a href="tel:+916296926034">+91 6296 926 034</a>
             </div>
           </div>
           <div class="contact-item">
-            <span class="contact-icon">💼</span>
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </span>
             <div>
               <span class="contact-label">LinkedIn</span>
               <a href="https://www.linkedin.com/in/bishnu-kr-singh/" target="_blank">bishnu-kr-singh</a>
             </div>
           </div>
           <div class="contact-item">
-            <span class="contact-icon">🐙</span>
+            <span class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </span>
             <div>
               <span class="contact-label">GitHub</span>
               <a href="https://github.com/Bishnu2427" target="_blank">Bishnu2427</a>
@@ -716,45 +805,54 @@
     </div>
   </footer>
 
-  <!-- =========== CHATBOT =========== -->
-  <div class="chatbot-wrapper" id="chatbotWrapper">
-    <div class="chatbot-window" id="chatWindow">
-      <div class="chat-header">
-        <div class="chat-header-info">
-          <div class="chat-avatar">🤖</div>
-          <div>
-            <h4>Bishnu's Buddy</h4>
-            <span class="chat-status">Online · Knows everything about Bishnu</span>
-          </div>
+  <!-- =========== CHATBOT — toggle and window are independently fixed =========== -->
+  <div class="chatbot-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M12 2a3 3 0 0 1 3 3v4H9V5a3 3 0 0 1 3-3z"/><circle cx="8.5" cy="16" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="16" r="1" fill="currentColor" stroke="none"/><path d="M3 15h2M19 15h2"/></svg>
         </div>
-        <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
-      </div>
-      <div class="chat-messages" id="chatMessages">
-        <div class="chat-msg bot-msg">
-          <div class="msg-avatar">🤖</div>
-          <div class="msg-bubble">
-            Hey there! 👋 I'm <strong>Bishnu's Buddy</strong> — your AI guide to everything about Bishnu. Ask me about his skills, projects, experience, or anything else!
-          </div>
-        </div>
-        <div class="chat-suggestions">
-          <button class="suggestion-chip" data-msg="What is Bishnu's current job?">Current job?</button>
-          <button class="suggestion-chip" data-msg="What technologies does Bishnu know?">Tech stack?</button>
-          <button class="suggestion-chip" data-msg="Tell me about Bishnu's projects">Projects?</button>
-          <button class="suggestion-chip" data-msg="Does Bishnu have leadership experience?">Leadership?</button>
+        <div>
+          <h4>Bishnu's Buddy</h4>
+          <span class="chat-status">Online · Knows everything about Bishnu</span>
         </div>
       </div>
-      <div class="chat-input-area">
-        <input type="text" id="chatInput" placeholder="Ask about Bishnu..." autocomplete="off" />
-        <button id="chatSend" aria-label="Send">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-        </button>
+      <button class="chat-close" id="chatClose" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-msg bot-msg">
+        <div class="msg-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M12 2a3 3 0 0 1 3 3v4H9V5a3 3 0 0 1 3-3z"/></svg>
+        </div>
+        <div class="msg-bubble">
+          Hey there! I'm <strong>Bishnu's Buddy</strong> — your AI guide to everything about Bishnu. Ask me about his skills, projects, experience, or anything else!
+        </div>
+      </div>
+      <div class="chat-suggestions">
+        <button class="suggestion-chip" data-msg="What is Bishnu's current job?">Current job?</button>
+        <button class="suggestion-chip" data-msg="What technologies does Bishnu know?">Tech stack?</button>
+        <button class="suggestion-chip" data-msg="Tell me about Bishnu's projects">Projects?</button>
+        <button class="suggestion-chip" data-msg="Does Bishnu have leadership experience?">Leadership?</button>
       </div>
     </div>
-    <button class="chatbot-toggle" id="chatToggle" aria-label="Open Bishnu's Buddy">
-      <span class="toggle-icon-open">🤖</span>
-      <span class="toggle-icon-close">✕</span>
-    </button>
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Ask about Bishnu..." autocomplete="off" />
+      <button id="chatSend" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
   </div>
+
+  <button class="chatbot-toggle" id="chatToggle" aria-label="Open Bishnu's Buddy">
+    <span class="toggle-icon-open">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </span>
+    <span class="toggle-icon-close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </span>
+  </button>
 
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
