@@ -1,28 +1,16 @@
-/* ============================================================
-   BISHNU KUMAR SINGH — Portfolio Main JS
-   Neural canvas, typed text, scroll animations, counter, nav
-   ============================================================ */
+// portfolio main — neural canvas, typed text, nav, scroll fx, counters, contact
 
 (function () {
-  "use strict";
 
-  // ---- neural network canvas ----
+  // ---- neural canvas ----
 
-  const canvas = document.getElementById("neuralCanvas");
-  const ctx = canvas.getContext("2d");
+  var canvas = document.getElementById("neuralCanvas");
+  var ctx = canvas.getContext("2d");
+  var nodes = [];
 
-  let nodes = [];
-  let animFrame;
-
-  const config = {
-    nodeCount: 70,
-    connectDist: 140,
-    nodeSpeed: 0.4,
-    nodeRadius: 2,
-    lineAlpha: 0.18,
-    nodeCyan: "rgba(0, 229, 255,",
-    nodePurple: "rgba(168, 85, 247,",
-  };
+  var NUM_NODES = 65;
+  var LINK_DIST = 130;
+  var SPEED = 0.38;
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -30,254 +18,246 @@
   }
 
   function makeNode() {
-    const isPurple = Math.random() > 0.6;
     return {
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * config.nodeSpeed,
-      vy: (Math.random() - 0.5) * config.nodeSpeed,
-      r: Math.random() * 1.5 + 1,
-      color: isPurple ? config.nodePurple : config.nodeCyan,
+      vx: (Math.random() - 0.5) * SPEED,
+      vy: (Math.random() - 0.5) * SPEED,
+      r: Math.random() * 1.4 + 0.8,
+      // mix of blue and teal nodes
+      isTeal: Math.random() > 0.55
     };
   }
 
   function initNodes() {
     nodes = [];
-    for (let i = 0; i < config.nodeCount; i++) {
-      nodes.push(makeNode());
-    }
+    for (var i = 0; i < NUM_NODES; i++) nodes.push(makeNode());
   }
 
-  function drawFrame() {
+  function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // draw connections
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
+    for (var i = 0; i < nodes.length; i++) {
+      for (var j = i + 1; j < nodes.length; j++) {
+        var dx = nodes[i].x - nodes[j].x;
+        var dy = nodes[i].y - nodes[j].y;
+        var d = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < config.connectDist) {
-          const alpha = (1 - dist / config.connectDist) * config.lineAlpha;
+        if (d < LINK_DIST) {
+          var alpha = (1 - d / LINK_DIST) * 0.16;
           ctx.beginPath();
           ctx.moveTo(nodes[i].x, nodes[i].y);
           ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = `rgba(0, 229, 255, ${alpha})`;
-          ctx.lineWidth = 0.8;
+          ctx.strokeStyle = "rgba(59,114,255," + alpha + ")";
+          ctx.lineWidth = 0.75;
           ctx.stroke();
         }
       }
     }
 
-    // draw nodes
-    for (const n of nodes) {
+    for (var k = 0; k < nodes.length; k++) {
+      var n = nodes[k];
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fillStyle = n.color + "0.8)";
+      ctx.fillStyle = n.isTeal ? "rgba(45,212,191,0.75)" : "rgba(59,114,255,0.75)";
       ctx.fill();
 
-      // move
       n.x += n.vx;
       n.y += n.vy;
-
       if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
       if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
     }
 
-    animFrame = requestAnimationFrame(drawFrame);
+    requestAnimationFrame(draw);
   }
 
-  function startCanvas() {
-    resize();
-    initNodes();
-    drawFrame();
-  }
+  resize();
+  initNodes();
+  draw();
 
-  window.addEventListener("resize", () => {
+  window.addEventListener("resize", function () {
     resize();
     initNodes();
   });
 
-  startCanvas();
 
+  // ---- typed text ----
 
-  // ---- typed text effect ----
-
-  const roles = [
+  var roles = [
     "AI Agents",
     "LLM Applications",
-    "Agentic Pipelines",
-    "RAG Systems",
+    "RAG Pipelines",
+    "Agentic Systems",
     "ML Models",
-    "AI Products",
+    "AI Products"
   ];
 
-  const typedEl = document.getElementById("typedText");
-  let roleIdx = 0;
-  let charIdx = 0;
-  let deleting = false;
-  let typingTimeout;
+  var typedEl = document.getElementById("typedText");
+  var ri = 0, ci = 0, deleting = false;
 
-  function typeLoop() {
-    const current = roles[roleIdx];
+  function type() {
+    var word = roles[ri];
 
     if (!deleting) {
-      typedEl.textContent = current.slice(0, charIdx + 1);
-      charIdx++;
-      if (charIdx === current.length) {
+      typedEl.textContent = word.slice(0, ci + 1);
+      ci++;
+      if (ci === word.length) {
         deleting = true;
-        typingTimeout = setTimeout(typeLoop, 1800);
+        setTimeout(type, 1700);
         return;
       }
     } else {
-      typedEl.textContent = current.slice(0, charIdx - 1);
-      charIdx--;
-      if (charIdx === 0) {
+      typedEl.textContent = word.slice(0, ci - 1);
+      ci--;
+      if (ci === 0) {
         deleting = false;
-        roleIdx = (roleIdx + 1) % roles.length;
-        typingTimeout = setTimeout(typeLoop, 300);
+        ri = (ri + 1) % roles.length;
+        setTimeout(type, 280);
         return;
       }
     }
 
-    const speed = deleting ? 55 : 90;
-    typingTimeout = setTimeout(typeLoop, speed);
+    setTimeout(type, deleting ? 52 : 88);
   }
 
-  typeLoop();
+  type();
 
 
-  // ---- navbar scroll behavior ----
+  // ---- navbar ----
 
-  const navbar = document.getElementById("navbar");
-  const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section[id]");
+  var navbar = document.getElementById("navbar");
+  var navToggle = document.getElementById("navToggle");
+  var navLinksEl = document.getElementById("navLinks");
+  var navLinks = document.querySelectorAll(".nav-link");
+  var sections = document.querySelectorAll("section[id]");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
+  window.addEventListener("scroll", function () {
+    navbar.classList.toggle("scrolled", window.scrollY > 55);
 
-    // highlight active nav link
-    let current = "";
-    sections.forEach((sec) => {
-      if (window.scrollY >= sec.offsetTop - 120) {
-        current = sec.getAttribute("id");
+    var current = "";
+    sections.forEach(function (sec) {
+      if (window.scrollY >= sec.offsetTop - 130) {
+        current = sec.id;
       }
     });
 
-    navLinks.forEach((link) => {
+    navLinks.forEach(function (link) {
       link.classList.toggle("active", link.getAttribute("href") === "#" + current);
     });
+  }, { passive: true });
+
+  navToggle.addEventListener("click", function () {
+    var open = navLinksEl.classList.toggle("open");
+    navToggle.classList.toggle("active", open);
   });
 
-
-  // ---- mobile nav toggle ----
-
-  const navToggle = document.getElementById("navToggle");
-  const navLinksContainer = document.getElementById("navLinks");
-
-  navToggle.addEventListener("click", () => {
-    navLinksContainer.classList.toggle("open");
-  });
-
-  document.querySelectorAll(".nav-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinksContainer.classList.remove("open");
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      navLinksEl.classList.remove("open");
+      navToggle.classList.remove("active");
     });
   });
 
-  document.addEventListener("click", (e) => {
+  document.addEventListener("click", function (e) {
     if (!navbar.contains(e.target)) {
-      navLinksContainer.classList.remove("open");
+      navLinksEl.classList.remove("open");
+      navToggle.classList.remove("active");
     }
   });
 
 
   // ---- scroll reveal ----
 
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-  );
+  var revealEls = document.querySelectorAll(".reveal");
 
-  document.querySelectorAll(".reveal").forEach((el, i) => {
-    el.style.transitionDelay = `${(i % 4) * 80}ms`;
-    revealObserver.observe(el);
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+
+  revealEls.forEach(function (el, i) {
+    el.style.transitionDelay = (i % 4) * 75 + "ms";
+    observer.observe(el);
   });
 
 
   // ---- counter animation ----
 
-  function animateCount(el) {
-    const target = parseInt(el.dataset.target, 10);
-    const duration = 1400;
-    const start = performance.now();
+  function animateCounter(el) {
+    var target = parseInt(el.dataset.target, 10);
+    var start = performance.now();
+    var dur = 1300;
 
     function step(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // ease out
-      const val = Math.floor(progress < 1 ? target * (1 - Math.pow(1 - progress, 3)) : target);
-      el.textContent = val;
-      if (progress < 1) requestAnimationFrame(step);
+      var p = Math.min((now - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(target * eased);
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = target;
     }
 
     requestAnimationFrame(step);
   }
 
-  const counterObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll(".stat-num").forEach(animateCount);
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
+  var statsObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll(".stat-num").forEach(animateCounter);
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
 
-  document.querySelectorAll(".about-stats").forEach((el) => {
-    counterObserver.observe(el);
-  });
+  var statsEl = document.querySelector(".about-stats");
+  if (statsEl) statsObserver.observe(statsEl);
 
 
   // ---- contact form ----
 
-  const form = document.getElementById("contactForm");
-  const formStatus = document.getElementById("formStatus");
+  var form = document.getElementById("contactForm");
+  var statusEl = document.getElementById("formStatus");
 
   if (form) {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      const btn = form.querySelector("button[type=submit]");
+
+      var btn = form.querySelector("button[type=submit]");
+      var name = form.name.value.trim();
+      var email = form.email.value.trim();
+      var subject = form.subject.value.trim() || "Portfolio Inquiry";
+      var message = form.message.value.trim();
+
       btn.textContent = "Sending...";
       btn.disabled = true;
 
-      // since there's no mail endpoint set up, just show a friendly message
-      setTimeout(() => {
-        formStatus.textContent = "Message sent! Bishnu will get back to you soon.";
-        formStatus.className = "form-status success";
-        form.reset();
-        btn.textContent = "Send Message";
-        btn.disabled = false;
-
-        setTimeout(() => {
-          formStatus.textContent = "";
-          formStatus.className = "form-status";
-        }, 5000);
-      }, 1000);
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message })
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.error) throw new Error(data.error);
+          statusEl.textContent = "Message sent! Bishnu will get back to you soon. 🙌";
+          statusEl.className = "form-status success";
+          form.reset();
+        })
+        .catch(function (err) {
+          statusEl.textContent = err.message || "Something went wrong. Try emailing directly.";
+          statusEl.className = "form-status error";
+        })
+        .finally(function () {
+          btn.textContent = "Send Message";
+          btn.disabled = false;
+          setTimeout(function () {
+            statusEl.textContent = "";
+            statusEl.className = "form-status";
+          }, 6000);
+        });
     });
   }
 

@@ -15,6 +15,12 @@ class Config:
     EMBED_MODEL = "all-MiniLM-L6-v2"
     TOP_K_RESULTS = 4
 
+    SMTP_SERVER   = os.getenv("SMTP_SERVER", "smtp.gmail.com")
+    SMTP_PORT     = int(os.getenv("SMTP_PORT", 587))
+    SMTP_USERNAME = os.getenv("SMTP_USERNAME", "")
+    SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
+    MAIL_TO       = os.getenv("MAIL_TO", "singhvishnukumar22@gmail.com")
+
 
 class DevelopmentConfig(Config):
     DEBUG = True
