@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bishnu Kumar Singh — AI-ML Engineer portfolio. Agentic AI, LLMs, AWS, Python." />
+  <title>Bishnu Kumar Singh | AI-ML Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}" />
+</head>
+<body>
+
+  <!-- =========== NAV =========== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">BKS<span class="dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Awards</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========== HERO =========== -->
+  <section id="hero">
+    <canvas id="neuralCanvas"></canvas>
+
+    <div class="hero-layout">
+      <div class="hero-text">
+        <div class="hero-tag-line">
+          <span class="tag-badge">Available for Opportunities</span>
+        </div>
+        <h1 class="hero-name">
+          Bishnu Kumar<br /><span class="name-highlight">Singh</span>
+        </h1>
+        <div class="hero-role-line">
+          <span class="role-prefix">I build </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-bio">
+          AI-ML Engineer at SARA Analytics · Agentic AI · LLMs · AWS · Full-Stack AI Products.<br />
+          Turning complex problems into intelligent systems that actually ship.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Get in Touch</a>
+          <a href="#projects" class="btn-ghost">View My Work</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Bishnu2427" target="_blank" rel="noopener" class="social-link" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/bishnu-kr-singh/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="mailto:singhvishnukumar22@gmail.com" class="social-link" title="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="profile-container">
+          <div class="profile-ring">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="profile-img-wrap">
+              <img src="{{ url_for('static', filename='images/bishnu.jpeg') }}" alt="Bishnu Kumar Singh" class="profile-img" />
+            </div>
+          </div>
+          <div class="floating-badges">
+            <span class="fbadge fb-1">Python</span>
+            <span class="fbadge fb-2">AWS</span>
+            <span class="fbadge fb-3">LLMs</span>
+            <span class="fbadge fb-4">CrewAI</span>
+            <span class="fbadge fb-5">Flask</span>
+            <span class="fbadge fb-6">YOLO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- =========== ABOUT =========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">01 / WHO I AM</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a B.Tech CSE-AIML graduate from UEM Jaipur, currently working as an <strong>AI-ML Engineer at SARA Analytics Pvt Ltd</strong> where I lead AI product development, build production-grade agentic systems, and mentor a team of 8.
+          </p>
+          <p>
+            My work sits at the intersection of <strong>Agentic AI, LLMs, cloud infrastructure, and real business problems</strong>. I've shipped systems that monitor enterprise workforce activity in real time, automate U.S. Tax and Audit workflows end-to-end, and orchestrate 28 AI agents in a single unified platform.
+          </p>
+          <p>
+            Outside of code, I've presented research at international conferences, represented companies at ICAI events, and led hardware-AI drone projects. I like building things that work in production — not just demos.
+          </p>
+          <div class="about-quick-facts">
+            <div class="fact">
+              <span class="fact-icon">🎓</span>
+              <div>
+                <strong>UEM Jaipur</strong>
+                <span>B.Tech CSE-AIML, 2025</span>
+              </div>
+            </div>
+            <div class="fact">
+              <span class="fact-icon">📍</span>
+              <div>
+                <strong>Jaipur, Rajasthan</strong>
+                <span>Open to relocation / remote</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num" data-target="8">0</span>
+            <span class="stat-suffix">+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="15">0</span>
+            <span class="stat-suffix">+</span>
+            <span class="stat-label">GitHub Repos</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="28">0</span>
+            <span class="stat-suffix"></span>
+            <span class="stat-label">AI Agents Orchestrated</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-target="8">0</span>
+            <span class="stat-suffix"></span>
+            <span class="stat-label">Team Members Led</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SKILLS =========== -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">02 / WHAT I KNOW</span>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">🧠</span>
+            <h3>Core AI / ML</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-hot">LLMs</span>
+            <span class="stag stag-hot">Agentic AI</span>
+            <span class="stag stag-hot">RAG</span>
+            <span class="stag">Machine Learning</span>
+            <span class="stag">Deep Learning</span>
+            <span class="stag">NLP</span>
+            <span class="stag">Computer Vision</span>
+            <span class="stag">YOLO v8</span>
+            <span class="stag">TensorFlow</span>
+            <span class="stag">OpenCV</span>
+            <span class="stag">CrewAI</span>
+            <span class="stag">Phi.data</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">☁️</span>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-hot">AWS EC2</span>
+            <span class="stag stag-hot">AWS Bedrock</span>
+            <span class="stag stag-hot">AWS ECS</span>
+            <span class="stag">AWS S3</span>
+            <span class="stag">AWS Lambda</span>
+            <span class="stag">AWS SageMaker</span>
+            <span class="stag">AWS MSK</span>
+            <span class="stag">AWS IAM</span>
+            <span class="stag">Docker</span>
+            <span class="stag">Apache Kafka</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">⚙️</span>
+            <h3>Backend & Frameworks</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-hot">Python</span>
+            <span class="stag stag-hot">Flask</span>
+            <span class="stag">Streamlit</span>
+            <span class="stag">REST APIs</span>
+            <span class="stag">n8n.io</span>
+            <span class="stag">Selenium</span>
+            <span class="stag">MS Power Automate</span>
+            <span class="stag">C</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">🗄️</span>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="stag stag-hot">MongoDB</span>
+            <span class="stag stag-hot">FAISS</span>
+            <span class="stag">Qdrant</span>
+            <span class="stag">MongoDB Atlas</span>
+            <span class="stag">MySQL</span>
+            <span class="stag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">🛠️</span>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="stag">Power BI</span>
+            <span class="stag">Microsoft Fabric</span>
+            <span class="stag">Figma</span>
+            <span class="stag">Git / GitHub</span>
+            <span class="stag">Postman</span>
+            <span class="stag">Monday.com</span>
+            <span class="stag">VS Code</span>
+            <span class="stag">Jupyter</span>
+            <span class="stag">Colab</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">🖥️</span>
+            <h3>Systems & Web</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="stag">Linux</span>
+            <span class="stag">Windows</span>
+            <span class="stag">HTML</span>
+            <span class="stag">CSS</span>
+            <span class="stag">MSI Installer (Wix)</span>
+            <span class="stag">Arduino</span>
+            <span class="stag">ESP32</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== EXPERIENCE =========== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">03 / WHERE I'VE WORKED</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Oct 2024 — Present</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>AI-ML Engineer</h3>
+              <span class="company-tag">SARA Analytics Pvt Ltd</span>
+            </div>
+            <span class="location-tag">📍 Jaipur, RJ (On-site)</span>
+            <ul class="timeline-points">
+              <li>Leading AI &amp; full-stack development for <strong>Vachi.ai</strong> — flagship product, from architecture to global launch readiness.</li>
+              <li>Built an AI-powered employee monitoring system (.msi desktop → Flask backend → web dashboard) as a direct competitor to HubStaff and Laurel.ai, using Flask, MongoDB, OpenCV, AWS EC2/MSK/Bedrock/ECS, LLMs, and RAG.</li>
+              <li>Engineered end-to-end AI agents for US Tax, Audit &amp; Accounting automation across MIP, Sylogist, QuickBooks, AccuFund — with data mining from USAspending.gov &amp; Federal Audit Clearinghouse using DL, ML &amp; NLP.</li>
+              <li>Leading <strong>DocLink</strong> — a Suralink-like document platform — with RESTful APIs deployed on AWS EC2 + S3.</li>
+              <li>Orchestrated <strong>28 AI agents</strong> in a unified CrewAI platform with a fine-tuned <strong>Llama 3.3 70B</strong> model.</li>
+              <li>Implementing <strong>CALM</strong> techniques for the company's proprietary modular AI Engine.</li>
+              <li>Leading &amp; mentoring a <strong>team of 8</strong> — works directly with CTO, CIO, and company owner.</li>
+            </ul>
+            <div class="tech-stack-chips">
+              <span>Python</span><span>Flask</span><span>AWS</span><span>CrewAI</span><span>MongoDB</span><span>LLMs</span><span>RAG</span><span>Docker</span><span>Kafka</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">May — Jul 2024</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>Data Analyst Intern</h3>
+              <span class="company-tag">Mayur Uniquoters Ltd.</span>
+            </div>
+            <span class="location-tag">📍 Jaipur, RJ (On-site)</span>
+            <p class="timeline-project">Project: Optimization of Manual Data Entry Operations</p>
+            <ul class="timeline-points">
+              <li>Built a hardware-based AI model (Arduino UNO + ESP32-Cam + OpenCV + Python) that automatically captures data from physical paper sheets and loads it directly into Excel.</li>
+              <li>Developed an operator monitoring app using the FLET framework with live Power BI dashboards integrated directly inside the app.</li>
+            </ul>
+            <div class="tech-stack-chips">
+              <span>Python</span><span>OpenCV</span><span>Arduino</span><span>ESP32</span><span>FLET</span><span>Power BI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">May 2024</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>Data Analyst Intern</h3>
+              <span class="company-tag">Afame Technologies</span>
+            </div>
+            <span class="location-tag">🌐 Remote</span>
+            <p class="timeline-project">Project: Data Analysis on Fetched Data</p>
+            <ul class="timeline-points">
+              <li>Built fake news detection and fraud detection models using ML algorithms.</li>
+              <li>Developed a text-to-image generation app using Python, OpenCV, and the FLET framework.</li>
+            </ul>
+            <div class="tech-stack-chips">
+              <span>Python</span><span>Scikit-Learn</span><span>OpenCV</span><span>FLET</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== PROJECTS =========== -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">04 / WHAT I'VE BUILT</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-icon">🤖</span>
+            <div class="project-links">
+              <a href="https://github.com/Bishnu2427" target="_blank" title="GitHub" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Employee Monitoring System</h3>
+          <p class="project-desc">Production-grade system with .msi desktop app → Flask backend → real-time web dashboard. Competes directly with HubStaff &amp; Laurel.ai. Uses LLMs, RAG, OpenCV, AWS MSK/Bedrock/ECS.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Flask</span><span>AWS</span><span>LLMs</span><span>RAG</span><span>MongoDB</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-icon">📊</span>
+            <div class="project-links">
+              <a href="https://github.com/Bishnu2427" target="_blank" title="GitHub" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">US Tax &amp; Audit AI Agents</h3>
+          <p class="project-desc">End-to-end AI agents for general ledger formatting, validation, reconciliation &amp; analysis across MIP, Sylogist, QuickBooks, AccuFund. Data mining from USAspending.gov &amp; FAC using DL, ML &amp; NLP.</p>
+          <div class="project-tags">
+            <span>CrewAI</span><span>NLP</span><span>n8n</span><span>Python</span><span>ML</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-icon">📁</span>
+            <div class="project-links">
+              <a href="https://github.com/Bishnu2427" target="_blank" title="GitHub" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">DocLink — Document Platform</h3>
+          <p class="project-desc">Advanced Suralink-like document workflow platform. Core workflows, RESTful APIs, deployed on-premises (UAT) and AWS EC2 (production) with S3 for scalable storage.</p>
+          <div class="project-tags">
+            <span>Flask</span><span>REST API</span><span>AWS EC2</span><span>S3</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-icon">🚨</span>
+            <div class="project-links">
+              <a href="https://github.com/Bishnu2427" target="_blank" title="GitHub" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Project SAI — Save Life using AI</h3>
+          <p class="project-desc">Real-time accident detection by integrating OpenCV-based AI model with Arduino + ESP32-Cam hardware. Triggers emergency alerts via a Flutter mobile app (SAI) on detection.</p>
+          <div class="project-tags">
+            <span>OpenCV</span><span>Arduino</span><span>ESP32</span><span>Flutter</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-icon">🩺</span>
+            <div class="project-links">
+              <a href="https://github.com/Bishnu2427/Chronic_Kidney_Disease_using_ML" target="_blank" title="GitHub" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Water Intake Prediction — CKD</h3>
+          <p class="project-desc">ML-based prediction of accurate water intake for Chronic Kidney Disease patients. Comparative analysis of multiple algorithms using Scikit-Learn, Pandas, Seaborn, NumPy, Matplotlib.</p>
+          <div class="project-tags">
+            <span>Scikit-Learn</span><span>Python</span><span>Pandas</span><span>Seaborn</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-icon">📷</span>
+            <div class="project-links">
+              <a href="https://github.com/Bishnu2427/ESP32_Webcam_Access_using_OpenCV" target="_blank" title="GitHub" class="proj-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 2.89-.39c.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">ESP32 Webcam + OpenCV ⭐ 2</h3>
+          <p class="project-desc">Live streaming webcam system integrating ESP32-CAM hardware module with OpenCV-based Python software. Most-starred repo on GitHub.</p>
+          <div class="project-tags">
+            <span>C</span><span>OpenCV</span><span>ESP32</span><span>Arduino</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== ACHIEVEMENTS =========== -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">05 / RECOGNITION</span>
+        <h2 class="section-title">Awards &amp; Certifications</h2>
+      </div>
+
+      <div class="achievements-layout">
+        <div class="awards-col">
+          <h3 class="sub-heading">Awards &amp; Highlights</h3>
+          <div class="award-card reveal">
+            <span class="award-icon">🏆</span>
+            <div>
+              <h4>Research Paper — ICAHTE-2024</h4>
+              <p>Presented <em>"MIS using AI (AHTE47)"</em> at the International Conference on Advances in Higher Technical Education.</p>
+            </div>
+          </div>
+          <div class="award-card reveal">
+            <span class="award-icon">🎓</span>
+            <div>
+              <h4>Cambridge Linguaskill — B1</h4>
+              <p>Achieved CERF Level B1 in the Linguaskill Business test from Cambridge University.</p>
+            </div>
+          </div>
+          <div class="award-card reveal">
+            <span class="award-icon">🤝</span>
+            <div>
+              <h4>ICAI AIS-2025 — AI Team Representative</h4>
+              <p>Represented Harshwal Consulting Services at the Institute of Chartered Accountants of India AIS-2025 on behalf of the AI team.</p>
+            </div>
+          </div>
+          <div class="award-card reveal">
+            <span class="award-icon">🚁</span>
+            <div>
+              <h4>Team Lead — UAC Aeromodelling Club</h4>
+              <p>Led the UEM Aeromodelling Club's AI-integrated drone project as team lead.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="certs-col">
+          <h3 class="sub-heading">Certifications</h3>
+          <div class="certs-grid">
+            <div class="cert-badge reveal"><span>🍃</span><p>MongoDB Python Developer Path</p><small>MongoDB University</small></div>
+            <div class="cert-badge reveal"><span>🍃</span><p>MongoDB Database Admin Path</p><small>MongoDB University</small></div>
+            <div class="cert-badge reveal"><span>☁️</span><p>AWS ML Foundation</p><small>Amazon Web Services</small></div>
+            <div class="cert-badge reveal"><span>☁️</span><p>AWS Cloud Foundations</p><small>Amazon Web Services</small></div>
+            <div class="cert-badge reveal"><span>📊</span><p>Data Analytics by Google</p><small>Coursera</small></div>
+            <div class="cert-badge reveal"><span>🌐</span><p>Data Analytics Essentials</p><small>CISCO</small></div>
+            <div class="cert-badge reveal"><span>🖥️</span><p>Introduction to Networking</p><small>NVIDIA / Coursera</small></div>
+            <div class="cert-badge reveal"><span>🛰️</span><p>Geo-processing using Python</p><small>IIRS-ISRO</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== CONTACT =========== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">06 / LET'S TALK</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-sub">Have a project in mind? Want to collaborate? Or just want to say hi — I'm always up for a good conversation.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:singhvishnukumar22@gmail.com">singhvishnukumar22@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+916296926034">+91 6296 926 034</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/bishnu-kr-singh/" target="_blank">bishnu-kr-singh</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/Bishnu2427" target="_blank">Bishnu2427</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" name="subject" placeholder="What's it about?" />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Tell me what's on your mind..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Send Message</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== FOOTER =========== -->
+  <footer>
+    <div class="container">
+      <p>Designed &amp; built by Bishnu Kumar Singh &nbsp;·&nbsp; 2025</p>
+      <p class="footer-sub">B.Tech CSE-AIML · AI-ML Engineer · Jaipur, India</p>
+    </div>
+  </footer>
+
+  <!-- =========== CHATBOT =========== -->
+  <div class="chatbot-wrapper" id="chatbotWrapper">
+    <div class="chatbot-window" id="chatWindow">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-avatar">🤖</div>
+          <div>
+            <h4>Bishnu's Buddy</h4>
+            <span class="chat-status">Online · Knows everything about Bishnu</span>
+          </div>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg bot-msg">
+          <div class="msg-avatar">🤖</div>
+          <div class="msg-bubble">
+            Hey there! 👋 I'm <strong>Bishnu's Buddy</strong> — your AI guide to everything about Bishnu. Ask me about his skills, projects, experience, or anything else!
+          </div>
+        </div>
+        <div class="chat-suggestions">
+          <button class="suggestion-chip" data-msg="What is Bishnu's current job?">Current job?</button>
+          <button class="suggestion-chip" data-msg="What technologies does Bishnu know?">Tech stack?</button>
+          <button class="suggestion-chip" data-msg="Tell me about Bishnu's projects">Projects?</button>
+          <button class="suggestion-chip" data-msg="Does Bishnu have leadership experience?">Leadership?</button>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Ask about Bishnu..." autocomplete="off" />
+        <button id="chatSend" aria-label="Send">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+    </div>
+    <button class="chatbot-toggle" id="chatToggle" aria-label="Open Bishnu's Buddy">
+      <span class="toggle-icon-open">🤖</span>
+      <span class="toggle-icon-close">✕</span>
+    </button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>

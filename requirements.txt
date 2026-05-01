@@ -1,0 +1,8 @@
+flask
+flask-pymongo
+python-dotenv
+sentence-transformers
+faiss-cpu
+numpy
+groq
+pymongo

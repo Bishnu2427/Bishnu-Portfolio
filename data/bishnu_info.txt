@@ -1,0 +1,240 @@
+ABOUT BISHNU KUMAR SINGH
+========================
+
+Bishnu Kumar Singh is a passionate AI Engineer currently working full-time as an AI-ML Engineer at SARA Analytics Pvt Ltd in Jaipur, Rajasthan, India. He completed his B.Tech in Computer Science Engineering with a specialization in Artificial Intelligence and Machine Learning (CSE-AIML) from the University of Engineering & Management, Jaipur in 2025 with a CGPA of 8.075.
+
+He has deep hands-on expertise in Agentic AI systems, LLM-based applications, Machine Learning, Data Analytics, and full-stack AI product development. He is a self-driven, collaborative individual who thrives on solving real-world problems with technology.
+
+PERSONAL INFORMATION
+====================
+
+Full Name: Bishnu Kumar Singh
+Phone: +91-6296926034
+Email: singhvishnukumar22@gmail.com
+LinkedIn: https://www.linkedin.com/in/bishnu-kr-singh/
+GitHub: https://github.com/Bishnu2427
+Location: Jaipur, Rajasthan, India
+Current Role: AI-ML Engineer at SARA Analytics Pvt Ltd (October 2024 – Present)
+
+EDUCATION
+=========
+
+Degree: Bachelor of Technology (B.Tech) in CSE with specialization in Artificial Intelligence and Machine Learning (CSE-AIML)
+Institute: University of Engineering & Management (UEM), Jaipur
+Year of Graduation: 2025
+CGPA: 8.075 out of 10
+
+CURRENT JOB EXPERIENCE
+=======================
+
+Bishnu is currently working as an AI-ML Engineer at SARA Analytics Pvt Ltd, Jaipur (On-site), since October 2024.
+
+He leads AI and full-stack development for the company's flagship product Vachi.ai. He is responsible for product vision, architecture decisions, and preparing the platform for global market readiness.
+
+One of his major achievements at SARA Analytics is building a complete AI-powered employee device monitoring system. This system has a desktop-server-web architecture where a custom .msi desktop application (built using Wix Toolset) sends real-time activity pulses to backend services, which then enables live workforce activity visualization via a web dashboard. The stack used includes HTML, CSS, Python Flask, JavaScript, MongoDB, AWS EC2, AWS MSK (Managed Streaming for Apache Kafka), AWS Bedrock, AWS ECS for production deployment, LLMs, OpenCV, RAG pipelines, and Vector Databases. This system is a direct competitor and alternative to HubStaff and Laurel.ai.
+
+He also designed and developed AI-driven automation solutions for US Tax, Accounting, and Audit workflows. This includes building end-to-end AI agents for general ledger formatting, validation, reconciliation, and financial data analysis across platforms like MIP, Sylogist, QuickBooks, and AccuFund. He also built prompt-based data mining and relevance classification models that scrape and analyze public government financial data from sources like USAspending.gov and the Federal Audit Clearinghouse (FAC) using Deep Learning, Machine Learning, and NLP techniques. These solutions significantly improved efficiency, data accuracy, and turnaround time for the finance team.
+
+Bishnu implemented AI-based processing and validation pipelines for bank transactions and SOC 1 audit control reports, using n8n for automated file ingestion, reading, and workflow orchestration.
+
+He is leading the development of DocLink — an advanced document management and workflow platform similar to Suralink. This involved implementing core workflows, creating major RESTful API endpoints, and deploying the solution on-premises for UAT (User Acceptance Testing) and on AWS EC2 for production, with Amazon S3 used for scalable and secure data storage.
+
+Bishnu led the orchestration of 28 AI agents and automation tools within a single unified, prompt-driven platform using CrewAI. This platform allows users to interact with multiple agents and receive consolidated outputs. It also uses a fine-tuned Llama 3.3 70B parameter model that Bishnu trained for the company's specific use case.
+
+He is implementing CALM (Continuous Autoregressive Language Model) techniques while designing the company's proprietary AI Engine. This engine has modular, reusable components that support multiple finance and operations use cases, with a focus on output quality, consistency, and efficiency.
+
+Bishnu designed, deployed, and managed Flask-based services on both Linux and Windows environments, including automation scripts, background services, executables, and MSI installers.
+
+He leads and mentors a team of 8 engineers and AI specialists. He works directly and closely with the CTO, CIO, and company owner, and collaborates across finance, audit, operations, and engineering teams to deliver production-ready AI solutions.
+
+INTERNSHIP EXPERIENCE
+=====================
+
+Data Analyst Intern at Mayur Uniquoters Ltd., Jaipur (On-site) — May to July 2024
+
+Project Title: Optimization of Manual Data Entry Operations
+
+During this internship, Bishnu developed a hardware-based AI model that can automatically capture data from physical paper sheets and load it directly into Excel. This was built using Arduino UNO, ESP32 CAM module, OpenCV, and Python. He also developed an operator monitoring application using the FLET framework, with live Power BI data visualizations integrated directly inside the FLET app to track operator performance in real time.
+
+---
+
+Data Analyst Intern at Afame Technologies — May 2024 (Remote)
+
+Project Title: Perform Data Analysis on Fetched Data
+
+During this internship, Bishnu developed a fake news detection model and a fraud detection model using various machine learning algorithms. He also built a text-to-image generation application using Python, OpenCV, and the FLET framework.
+
+PROJECTS
+========
+
+Project 1: Water Intake Prediction in CKD (Chronic Kidney Disease) Patients
+Duration: January 2024 – June 2024
+
+Bishnu applied multiple machine learning algorithms to predict the accurate water intake required by a patient suffering from Chronic Kidney Disease (CKD). The project used Python libraries including Scikit-Learn, Seaborn, Matplotlib, Pandas, and NumPy for data preprocessing, visualization, model building, and evaluation.
+
+---
+
+Project 2: Project SAI — Save Life using AI
+Duration: January 2023 – December 2023
+
+Bishnu integrated a software-based AI model using OpenCV with physical hardware (Arduino and ESP32-Cam) to detect road accidents in real time. On detection, the system triggers a Flutter-based mobile application called SAI (Save Life using AI) that can alert emergency contacts. This project demonstrated his ability to bridge hardware and software AI systems.
+
+---
+
+Project 3: Mukku — Prompt-Based Content Creator App
+A web application where users can generate content for any platform through simple prompts. Built with HTML.
+
+---
+
+Project 4: My-Own-AI
+A personal AI project showcasing custom AI capabilities.
+
+---
+
+Project 5: me-vs-me — Conversational App
+A Python-based application described as "Talk to yourself" — an introspective conversational tool.
+
+---
+
+Project 6: Student Management System FLET App
+A Python application built using the FLET framework for managing student details with Excel export functionality. It received 1 star on GitHub.
+
+---
+
+Project 7: ESP32 Webcam Access using OpenCV
+A live webcam project using OpenCV, Arduino, and ESP32-CAM module. This is one of his most-starred repos on GitHub with 2 stars.
+
+---
+
+Project 8: Chronic Kidney Disease Detection using ML
+A Jupyter Notebook-based project applying machine learning for early detection of Chronic Kidney Disease. Received 1 star on GitHub.
+
+---
+
+Project 9: Covid-19 Prediction using ML
+Machine learning-based prediction model for Covid-19. Received 1 star on GitHub.
+
+TECHNICAL SKILLS
+================
+
+Core AI/ML Expertise: AI Agents, Large Language Models (LLMs), Agentic AI systems, Data Analysis, Machine Learning, Deep Learning, Natural Language Processing (NLP), Image Processing, Computer Vision, Retrieval-Augmented Generation (RAG), Vector Databases, Fine-tuning LLMs
+
+Programming Languages: Python (primary), C, Java (basic)
+
+Cloud Technologies (AWS): EC2 (Elastic Compute Cloud), IAM (Identity and Access Management), S3 (Simple Storage Service), Lambda, Bedrock (managed LLMs), SageMaker, MSK (Managed Streaming for Apache Kafka), ECS (Elastic Container Service)
+
+Containerization: Docker, AWS ECS
+
+Stream Processing: Apache Kafka, AWS MSK
+
+Databases: MySQL, MongoDB, MongoDB Atlas
+
+Vector Databases: FAISS, Quadrant (Qdrant)
+
+Web Technologies: HTML, CSS, JavaScript (basic), Flask (Python web framework), Streamlit
+
+Agentic AI Frameworks: CrewAI, Phi.data, Replit
+
+Machine Learning Libraries: TensorFlow, Scikit-Learn, Pandas, NumPy, Matplotlib, Seaborn, OpenCV, YOLO v8
+
+Automation: Selenium, n8n.io, Microsoft Power Automate
+
+API Testing: Postman
+
+Version Control: Git, GitHub
+
+BI Tools: Power BI, Microsoft Fabric
+
+Project Management: Monday.com
+
+Software & Tools: Figma, VS Code, Google Colab, Jupyter Notebook, MS Office
+
+Operating Systems: Linux (Ubuntu/Debian), Windows
+
+AWARDS AND ACHIEVEMENTS
+=======================
+
+1. Research Paper Presentation — Bishnu presented his research paper titled "MIS using AI (AHTE47)" at the International Conference on Advances in Higher Technical Education (ICAHTE-2024). This is a recognized international academic conference.
+
+2. Cambridge University Linguaskill Certification — Bishnu achieved CERF Level B1 in the Linguaskill Business test from Cambridge University, demonstrating strong professional English communication skills.
+
+3. ICAI AIS-2025 Representation — Bishnu represented Harshwal Consulting Services Pvt Ltd at the Institute of Chartered Accountants of India (ICAI) AIS-2025 conference on behalf of the AI team. This shows his involvement at the intersection of AI and the finance/accounting industry.
+
+CERTIFICATIONS
+==============
+
+1. MongoDB Python Developer Path — MongoDB University
+2. MongoDB Database Administrator Path — MongoDB University
+3. Data Analytics Essentials — CISCO
+4. AWS Academy Machine Learning Foundation — Amazon Web Services (AWS)
+5. Data Analytics by Google — Coursera
+6. Introduction to Networking by NVIDIA — Coursera
+7. AWS Academy Cloud Foundations — Amazon Web Services (AWS)
+8. Geo-processing using Python — IIRS-ISRO (Indian Institute of Remote Sensing, Indian Space Research Organisation)
+
+EXTRA CURRICULAR ACTIVITIES
+============================
+
+Team Lead — UAC (UEM Aeromodelling Club): Bishnu served as team lead for an AI-integrated drone project at the UEM Aeromodelling Club. This involved integrating AI models with physical drone hardware.
+
+ICAI Representation: He represented Harshwal Consulting Services Pvt Ltd at the prestigious ICAI (Institute of Chartered Accountants of India) AIS-2025 event on behalf of the AI team, bridging the gap between AI technology and the accounting profession.
+
+FREQUENTLY ASKED QUESTIONS
+===========================
+
+Q: What is Bishnu's current job?
+A: Bishnu is currently working as an AI-ML Engineer at SARA Analytics Pvt Ltd in Jaipur, Rajasthan. He started in October 2024 and is currently working there. He leads AI development, manages a team of 8 people, and works closely with the CTO, CIO, and company owners.
+
+Q: What is Bishnu's educational background?
+A: Bishnu completed a B.Tech in Computer Science Engineering with AI-ML specialization (CSE-AIML) from the University of Engineering & Management, Jaipur in 2025, with a CGPA of 8.075.
+
+Q: What technologies does Bishnu know?
+A: Bishnu has expertise in Python, AI/ML, LLMs, Agentic AI, AWS cloud services (EC2, S3, Bedrock, SageMaker, MSK, ECS), Docker, Apache Kafka, MongoDB, FAISS, TensorFlow, OpenCV, YOLO v8, Flask, CrewAI, n8n, Power BI, and many more.
+
+Q: Has Bishnu worked with LLMs and generative AI?
+A: Yes. Bishnu has extensive experience with LLMs. He has fine-tuned the Llama 3.3 70B model, built RAG (Retrieval-Augmented Generation) pipelines, orchestrated 28 AI agents using CrewAI, built AI-powered monitoring systems using AWS Bedrock, and is currently implementing CALM (Continuous Autoregressive Language Model) techniques for a proprietary AI engine.
+
+Q: Does Bishnu have leadership experience?
+A: Yes. Bishnu leads and mentors a team of 8 engineers at SARA Analytics. He also served as Team Lead for the UAC Aeromodelling Club's AI drone project at UEM. He works directly with company CTO, CIO, and the owner.
+
+Q: What is Vachi.ai?
+A: Vachi.ai is the flagship AI platform of SARA Analytics Pvt Ltd where Bishnu works. He leads the AI and full-stack development for this product, contributing to its vision, architecture, and global market readiness.
+
+Q: What is DocLink?
+A: DocLink is an advanced document management and workflow platform being developed at SARA Analytics, similar to Suralink. Bishnu is leading its development, implementing core workflows, building RESTful API endpoints, and managing its deployment on AWS EC2 with S3 for storage.
+
+Q: What is Bishnu's experience with AWS?
+A: Bishnu has hands-on production experience with AWS EC2, S3, Lambda, IAM, Bedrock (for LLM inference), SageMaker, MSK (Managed Kafka), and ECS (for containerized deployments). He uses these for real production applications at SARA Analytics.
+
+Q: What projects has Bishnu built?
+A: Some notable projects include: an AI-powered employee monitoring system (alternative to HubStaff), AI agents for US Tax and Audit workflows, the DocLink document platform, a CKD water intake prediction ML model, Project SAI (accident detection with Arduino + OpenCV), Mukku (prompt-based content creator), and an ESP32 webcam system using OpenCV.
+
+Q: Is Bishnu available for new opportunities?
+A: Bishnu is currently working at SARA Analytics Pvt Ltd. For collaborations, job inquiries, or opportunities, you can reach him at singhvishnukumar22@gmail.com or connect with him on LinkedIn at linkedin.com/in/bishnu-kr-singh/.
+
+Q: What are Bishnu's soft skills?
+A: Bishnu is a strong team leader, communicator, and cross-functional collaborator. He works across finance, audit, operations, and engineering teams. He presented a research paper at an international conference and represented a company at ICAI. He holds a Cambridge B1 English certification, showing his professional communication ability.
+
+Q: What is Bishnu's CGPA?
+A: Bishnu's CGPA is 8.075 out of 10 from his B.Tech program at University of Engineering & Management, Jaipur.
+
+Q: What frameworks does Bishnu use for AI agents?
+A: Bishnu uses CrewAI as his primary agentic framework. He has orchestrated 28 AI agents in a single platform using CrewAI. He also uses Phi.data and Replit for agentic development.
+
+Q: Has Bishnu published any research?
+A: Yes. Bishnu presented his research paper "MIS using AI (AHTE47)" at the International Conference on Advances in Higher Technical Education (ICAHTE-2024).
+
+Q: What is Bishnu's GitHub profile?
+A: Bishnu's GitHub username is Bishnu2427. His GitHub URL is https://github.com/Bishnu2427. He has 15+ public repositories including ML projects, hardware-AI integration, FLET apps, and web projects.
+
+Q: How long has Bishnu been working professionally?
+A: Bishnu has been working professionally since May 2024 (internships) and full-time since October 2024, giving him about 1 year of total professional experience as of 2025. He has been building real production-level AI systems in that time.
+
+Q: What databases does Bishnu work with?
+A: Bishnu works with MySQL, MongoDB, and MongoDB Atlas for relational and NoSQL databases. For vector storage (used in RAG systems), he uses FAISS and Qdrant (Quadrant).
+
+Q: What is Bishnu's experience with Docker and containerization?
+A: Bishnu has hands-on experience with Docker and AWS ECS (Elastic Container Service) for deploying containerized applications in production environments at SARA Analytics.
+
+Q: What automation tools does Bishnu use?
+A: Bishnu uses n8n.io and Microsoft Power Automate for workflow automation. He has used n8n specifically for automated file ingestion and orchestration in audit workflows. He also uses Selenium for browser automation.
