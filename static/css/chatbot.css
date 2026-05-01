@@ -2,15 +2,14 @@
   Bishnu's Buddy — chatbot widget
 */
 
+/* wrapper is exactly the size of the toggle button — no invisible overlay on the page */
 .chatbot-wrapper {
   position: fixed;
   bottom: 1.8rem;
   right: 1.8rem;
   z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.9rem;
+  width: 56px;
+  height: 56px;
 }
 
 .chatbot-toggle {
@@ -25,6 +24,8 @@
   justify-content: center;
   box-shadow: 0 4px 22px rgba(59,114,255,0.4);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
+  position: relative;
+  z-index: 1;
 }
 .chatbot-toggle:hover {
   transform: scale(1.08);
@@ -36,8 +37,11 @@
 .chatbot-toggle.open .toggle-icon-open { display: none; }
 .chatbot-toggle.open .toggle-icon-close { display: block; }
 
-/* window */
+/* window is absolutely positioned above the toggle — not in the layout flow */
 .chatbot-window {
+  position: absolute;
+  bottom: calc(56px + 0.9rem);
+  right: 0;
   width: 370px;
   height: 510px;
   background: #0b0e1a;
@@ -56,7 +60,7 @@
 .chatbot-window.open {
   transform: scale(1) translateY(0);
   opacity: 1;
-  pointer-events: all;
+  pointer-events: auto;
 }
 
 /* header */

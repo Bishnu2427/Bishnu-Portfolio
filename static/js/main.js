@@ -2,6 +2,15 @@
 
 (function () {
 
+  // ---- cursor glow ----
+  var glow = document.getElementById("cursorGlow");
+  if (glow && window.matchMedia("(hover: hover)").matches) {
+    window.addEventListener("mousemove", function (e) {
+      glow.style.left = e.clientX + "px";
+      glow.style.top  = e.clientY + "px";
+    }, { passive: true });
+  }
+
   // ---- neural canvas ----
 
   var canvas = document.getElementById("neuralCanvas");
@@ -214,6 +223,22 @@
 
   var statsEl = document.querySelector(".about-stats");
   if (statsEl) statsObserver.observe(statsEl);
+
+
+  // ---- proficiency bars ----
+  var profObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll(".prof-fill").forEach(function (bar) {
+          bar.style.width = bar.dataset.pct + "%";
+        });
+        profObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  var profWrap = document.querySelector(".prof-wrap");
+  if (profWrap) profObserver.observe(profWrap);
 
 
   // ---- contact form ----
