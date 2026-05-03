@@ -7,9 +7,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 class Config:
-    SECRET_KEY = os.getenv("SECRET_KEY", "bks-portfolio-dev-key-2025")
-    GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-    DATA_PATH = os.path.join(BASE_DIR, "data", "bishnu_info.txt")
+    SECRET_KEY = os.getenv("SECRET_KEY", "bks-portfolio-dev-key-2026")
 
     SMTP_SERVER   = os.getenv("SMTP_SERVER", "smtp.gmail.com")
     SMTP_PORT     = int(os.getenv("SMTP_PORT", 587))
@@ -29,7 +27,6 @@ class ProductionConfig(Config):
 config_map = {
     "development": DevelopmentConfig,
     "production": ProductionConfig,
-    "default": DevelopmentConfig,
 }
 
 
