@@ -32,11 +32,11 @@ def contact():
 def _send_mail(sender_name, sender_email, subject, body):
     cfg = current_app.config
 
-    smtp_server = cfg.get("SMTP_SERVER", "smtp.gmail.com")
-    smtp_port   = int(cfg.get("SMTP_PORT", 587))
-    smtp_user   = cfg.get("SMTP_USERNAME", "")
-    smtp_pass   = cfg.get("SMTP_PASSWORD", "")
-    recipient   = cfg.get("MAIL_TO", "singhvishnukumar22@gmail.com")
+    smtp_server = cfg["SMTP_SERVER"]
+    smtp_port   = cfg["SMTP_PORT"]
+    smtp_user   = cfg["SMTP_USERNAME"]
+    smtp_pass   = cfg["SMTP_PASSWORD"]
+    recipient   = cfg["MAIL_TO"]
 
     if not smtp_user or not smtp_pass:
         raise ValueError("SMTP_USERNAME / SMTP_PASSWORD not set in .env")
@@ -80,7 +80,6 @@ def _send_mail(sender_name, sender_email, subject, body):
     msg.attach(MIMEText(plain, "plain"))
     msg.attach(MIMEText(html, "html"))
 
-    # port 587 → STARTTLS  |  port 465 → SSL
     if smtp_port == 465:
         with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
             server.login(smtp_user, smtp_pass)

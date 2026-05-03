@@ -1,5 +1,3 @@
-import uuid
-from datetime import datetime
 from flask import Blueprint, request, jsonify, current_app
 from app import rag_service
 
@@ -13,7 +11,6 @@ def chat():
         return jsonify({"error": "Message is required"}), 400
 
     user_msg = data["message"].strip()
-    session_id = data.get("session_id") or str(uuid.uuid4())
 
     try:
         answer = rag_service.answer(user_msg)
@@ -21,8 +18,4 @@ def chat():
         current_app.logger.error(f"RAG error: {e}")
         answer = "Something went sideways on my end. Try asking again!"
 
-    return jsonify({
-        "response": answer,
-        "session_id": session_id,
-        "timestamp": datetime.utcnow().isoformat()
-    })
+    return jsonify({"response": answer})

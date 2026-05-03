@@ -1,7 +1,7 @@
 # Bishnu Kumar Singh — Portfolio
 
 Personal portfolio site for **Bishnu Kumar Singh**, AI-ML Engineer.  
-Built with Flask, MongoDB, and a RAG-powered chatbot called **Bishnu's Buddy**.
+Built with Flask and a context-aware chatbot called **Bishnu's Buddy**.
 
 ---
 
@@ -11,8 +11,7 @@ Built with Flask, MongoDB, and a RAG-powered chatbot called **Bishnu's Buddy**.
 |-------|------|
 | Frontend | HTML, CSS (Space Grotesk font), Vanilla JS |
 | Backend | Python, Flask |
-| Database | MongoDB (chat history) |
-| Chatbot | RAG · FAISS (local vector store) · sentence-transformers · Groq API |
+| Chatbot | Full-context RAG · Groq API (`llama-3.1-8b-instant`) |
 
 ---
 
@@ -24,12 +23,10 @@ portfolio/
 │   ├── __init__.py          # Flask app factory
 │   ├── routes/
 │   │   ├── main.py          # serves index.html
-│   │   └── chat.py          # /api/chat endpoint
-│   ├── services/
-│   │   ├── rag.py           # RAG pipeline (FAISS + embeddings + Groq)
-│   │   └── db.py            # MongoDB init
-│   └── models/
-│       └── conversation.py  # chat history model
+│   │   ├── chat.py          # /api/chat endpoint
+│   │   └── contact.py       # /api/contact endpoint
+│   └── services/
+│       └── rag.py           # loads knowledge base, calls Groq
 ├── static/
 │   ├── css/
 │   │   ├── style.css
@@ -37,17 +34,18 @@ portfolio/
 │   ├── js/
 │   │   ├── main.js          # neural canvas, typed text, scroll fx
 │   │   └── chatbot.js       # chatbot UI logic
+│   ├── files/
+│   │   └── Bishnu_Kumar_Singh_CV.pdf
 │   └── images/
 │       └── bishnu.jpeg
 ├── templates/
 │   └── index.html
 ├── data/
-│   └── bishnu_info.txt      # RAG knowledge base
-├── vector_store/            # auto-generated on first run (FAISS index)
+│   └── bishnu_info.txt      # chatbot knowledge base
 ├── config.py
 ├── run.py
 ├── requirements.txt
-└── .env.example
+└── .env
 ```
 
 ---
@@ -74,18 +72,23 @@ pip install -r requirements.txt
 ```
 
 **4. Configure environment**
-```bash
-cp .env.example .env
-# edit .env — add GROQ_API_KEY for full chatbot responses (free at console.groq.com)
+
+Copy `.env` and fill in your values:
+
+```env
+FLASK_ENV=development
+SECRET_KEY=your-secret-key
+
+GROQ_API_KEY=           # free at console.groq.com
+
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USERNAME=your@gmail.com
+SMTP_PASSWORD=your-app-password
+MAIL_TO=your@gmail.com
 ```
 
-**5. Make sure MongoDB is running**
-```bash
-# default: mongodb://localhost:27017
-# or update MONGO_URI in .env
-```
-
-**6. Run**
+**5. Run**
 ```bash
 python run.py
 ```
@@ -96,10 +99,10 @@ Open `http://localhost:5000` in your browser.
 
 ## Chatbot — Bishnu's Buddy
 
-On first run the RAG service builds a FAISS vector index from `data/bishnu_info.txt` and caches it under `vector_store/`. Subsequent starts load the cached index (fast).
+The chatbot loads `data/bishnu_info.txt` (the full knowledge base) once at startup and passes it as context on every request to Groq.
 
-- **Without GROQ_API_KEY** — returns the most relevant text chunk from the knowledge base.
-- **With GROQ_API_KEY** — uses `llama-3.1-8b-instant` via Groq to generate natural, conversational answers grounded in the retrieved context.
+- **Without GROQ_API_KEY** — keyword-based fallback from the knowledge base.
+- **With GROQ_API_KEY** — natural conversational answers via `llama-3.1-8b-instant`.
 
 Get a free Groq API key at [console.groq.com](https://console.groq.com).
 
@@ -111,11 +114,11 @@ Get a free Groq API key at [console.groq.com](https://console.groq.com).
 - Typing effect for role titles
 - Scroll-triggered reveal animations
 - Animated stat counters
-- Glassmorphism skill cards with hot-tag highlights
+- Glassmorphism skill cards
 - Vertical experience timeline
 - Project cards with hover effects
+- Resume section with CV download
 - Certifications & awards section
-- Contact form
+- Contact form (SMTP email delivery)
 - Responsive design (mobile-first)
-- Floating chatbot (Bishnu's Buddy) with RAG + FAISS + Groq
-- MongoDB-backed chat session history
+- Floating chatbot (Bishnu's Buddy)
