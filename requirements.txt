@@ -1,6 +1,4 @@
 flask
-flask-pymongo
 python-dotenv
 groq
-pymongo
 gunicorn

@@ -2,7 +2,6 @@ import uuid
 from datetime import datetime
 from flask import Blueprint, request, jsonify, current_app
 from app import rag_service
-from app.models.conversation import save_message, get_session_history
 
 chat_bp = Blueprint("chat", __name__)
 
@@ -22,19 +21,8 @@ def chat():
         current_app.logger.error(f"RAG error: {e}")
         answer = "Something went sideways on my end. Try asking again!"
 
-    try:
-        save_message(session_id, user_msg, answer)
-    except Exception:
-        pass
-
     return jsonify({
         "response": answer,
         "session_id": session_id,
         "timestamp": datetime.utcnow().isoformat()
     })
-
-
-@chat_bp.route("/chat/history/<session_id>", methods=["GET"])
-def history(session_id):
-    msgs = get_session_history(session_id)
-    return jsonify({"messages": msgs, "session_id": session_id})

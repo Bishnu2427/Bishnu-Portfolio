@@ -1,6 +1,5 @@
 from flask import Flask
 from config import get_config
-from app.services.db import init_db
 from app.services.rag import RAGService
 
 rag_service = None
@@ -12,8 +11,6 @@ def create_app():
     app = Flask(__name__, template_folder="../templates", static_folder="../static")
     cfg = get_config()
     app.config.from_object(cfg)
-
-    init_db(app)
 
     rag_service = RAGService(cfg)
 
